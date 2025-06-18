@@ -1,136 +1,178 @@
+
 # 🌶️ Pepper Paradise – E-commerce Website
 
-**Pepper Paradise** is a full-stack e-commerce website developed as part of a 6-month internship at **Opentruf Technologies**. This platform focuses on selling only **chillies and pepper-based products**, built using modern web development technologies like **ReactJS**, **NodeJS**, **ExpressJS**, **PostgreSQL**, and **Sequelize**.
+**Pepper Paradise** is a full-stack e-commerce platform focused exclusively on **chillies and pepper-based products**. Developed during my 6-month internship at **Opentruf Technologies**, this project showcases a complete real-world application built with modern web technologies.
 
 ---
 
-## 📌 Project Overview
+## 📁 Repository Structure
 
-- 🔹 **Frontend**: ReactJS
-- 🔹 **Backend**: NodeJS with ExpressJS
-- 🔹 **Database**: PostgreSQL
-- 🔹 **Authentication**: JWT (JSON Web Token)
-- 🔹 **ORM**: Sequelize
-- 🔹 **Version Control**: Git + GitHub
+```
 
----
+├── .gitignore
+├── README.md
+├── backend
+│   ├── .env                  # Environment variables (not committed)
+│   ├── config
+│   │   └── config.js         # Database and app configuration
+│   ├── controllers
+│   │   └── userController.js # API logic handlers
+│   ├── index.js              # Backend server entry point
+│   ├── middleware
+│   │   └── errorHandler.js   # Custom error handling middleware
+│   ├── models
+│   │   ├── index.js          # Model associations and setup
+│   │   ├── order.js          # Order model
+│   │   └── user.js           # User model
+│   ├── package.json
+│   ├── package-lock.json
+│   └── routes
+│       └── userRoutes.js     # API route definitions
+└── frontend
+├── .gitignore
+├── README.md
+├── package.json
+├── package-lock.json
+├── public
+│   ├── index.html        # React root HTML
+│   └── robots.txt
+└── src
+├── App.js            # Main React component
+├── App.css
+├── components        # Reusable React components
+│   ├── Address.js
+│   ├── Cart.js
+│   ├── Category.js
+│   ├── Footer.js
+│   ├── ForgotPassword.js
+│   ├── Login.js
+│   ├── Navbar.js
+│   ├── OtpComponent.js
+│   ├── Payment.js
+│   ├── PrivateRoute.js
+│   ├── ProductCard.js
+│   ├── Products.js
+│   ├── address.css
+│   ├── login.css
+│   └── payment.css
+├── index.js          # React entry point
+├── index.css
+├── reportWebVitals.js
+└── setupTests.js
 
-## 🧩 Frontend – ReactJS
-
-The frontend was developed using **ReactJS** for a responsive and dynamic user experience.
-
-### Key Components:
-- **Home Page**: Displays product categories like dry red chilli, black pepper, etc.
-- **Product Listing Page**: Shows a grid of available products.
-- **Product Details Page**: Full details of a selected product.
-- **Cart Page**: View and update items in the cart.
-- **Login/Signup Page**: User authentication interface.
-- **Order Summary Page**: Displays confirmation after placing an order.
-
-👉 **Why React?**  
-Reusable components and fast UI updates enhance performance and code structure.
-
----
-
-## 🧩 Backend – NodeJS + ExpressJS
-
-The backend server was built using **NodeJS** and **ExpressJS** to handle logic and routing through RESTful APIs.
-
-### Key Features:
-- User Login/Signup with JWT authentication
-- Product APIs: Fetch all/single product, search
-- Cart APIs: Add, update, remove items
-- Order APIs: Place and view past orders
-
-👉 **Why Node + Express?**  
-Efficient for creating scalable APIs with minimal setup.
-
----
-
-## 🗄️ Database – PostgreSQL
-
-Used **PostgreSQL** as the primary database to manage all persistent data.
-
-### Tables:
-- **Users**: Stores email, name, password
-- **Products**: Stores name, price, image, description
-- **Cart**: Items selected by the user
-- **Orders**: Completed order details and totals
-
-👉 **Why PostgreSQL?**  
-A powerful relational database with excellent support for SQL features and Sequelize ORM.
-
----
-
-## 🧰 Sequelize ORM
-
-Used **Sequelize** to interact with the PostgreSQL database.
-
-### Benefits:
-- Easy model definitions for Users, Products, Cart, Orders
-- Simplified queries and data relationships
-- Avoids raw SQL, making code more readable
-
-👉 **Why Sequelize?**  
-It makes database integration simpler and safer while keeping the code organized.
+````
 
 ---
 
-## 🔐 JWT (JSON Web Token)
+## 🔷 Project Overview
 
-JWT was implemented for secure login and route protection.
+### Frontend - ReactJS  
+The frontend app (inside `/frontend`) is built with ReactJS to create a smooth and dynamic user experience. Key components include:
 
-### How it works:
-- Token generated after login/signup
-- Token attached to protected requests (e.g., add to cart, place order)
+- **Login.js & ForgotPassword.js** – User authentication and password reset flows.
+- **Products.js & ProductCard.js** – Displaying product listings and details.
+- **Cart.js & Payment.js** – Cart management and order checkout.
+- **Navbar.js & Footer.js** – Navigation and footer components.
+- **OtpComponent.js** – For OTP verification during signup/login flows.
+- **PrivateRoute.js** – Protects routes for authenticated users only.
 
-👉 **Why JWT?**  
-Ensures only authenticated users can access protected routes and perform actions securely.
-
----
-
-## 🔄 Git & GitHub
-
-Version control was handled using **Git** and the project was hosted on **GitHub**.
-
-### Workflow:
-- Regular commits with clear messages
-- Branches used for testing new features
-- Collaborated with mentor via GitHub
-
-👉 **Why GitHub?**  
-To track code changes, enable collaboration, and store code safely online.
+CSS files in the components folder (`login.css`, `address.css`, `payment.css`) style respective parts of the UI.
 
 ---
 
-## ✅ Code Quality & Testing
+### Backend - NodeJS & ExpressJS  
+The backend code (inside `/backend`) manages API endpoints, business logic, and database interaction:
 
-- Followed clean code practices
-- Wrote test cases for critical APIs (login, cart, order)
-
-👉 **Why?**  
-Improves readability, maintainability, and ensures reliability of the application.
-
----
-
-## ✨ Final Summary
-
-This full-stack e-commerce project gave me hands-on experience with both frontend and backend development. I used **ReactJS** for the UI, **NodeJS + ExpressJS** for backend logic, **PostgreSQL + Sequelize** for the database, and secured the system using **JWT**. Version control was managed using **GitHub**, and I followed best coding practices throughout.
+- `index.js`: Starts the Express server and connects middleware.
+- `/controllers/userController.js`: Contains logic for user authentication, product handling, and orders.
+- `/routes/userRoutes.js`: Defines API routes related to user and order actions.
+- `/models/`: Sequelize models for Users, Orders, and their relationships.
+- `/middleware/errorHandler.js`: Custom error handling logic.
+- `/config/config.js`: Database and environment configurations.
 
 ---
 
-## 🚀 Future Improvements
+## 🔐 Security & Authentication
 
-- Integrate payment gateway
-- Admin dashboard for product management
-- Add filters and search by category
-- Mobile-responsive design enhancements
+- Used **JWT (JSON Web Token)** to secure user sessions and protect APIs.
+- Passwords are securely handled with hashing (bcrypt).
+- Protected routes via middleware in backend and React private routes.
+
+---
+
+## 🗄️ Database
+
+- **PostgreSQL** is used as the relational database.
+- Models and queries are managed via **Sequelize ORM** for cleaner code and easier maintenance.
+
+---
+
+## 🔄 Version Control
+
+- Git is used for version control.
+- Regular commits and branches were used to manage features and bug fixes.
+- The entire project is hosted on GitHub.
+
+---
+
+## 📝 How to Run the Project
+
+### Backend
+
+1. Navigate to the `backend` folder:  
+   ```bash
+   cd backend
+````
+
+2. Install dependencies:
+
+   ```bash
+   npm install
+   ```
+3. Create a `.env` file with your environment variables (database URL, JWT secret, etc.).
+4. Start the backend server:
+
+   ```bash
+   npm start
+   ```
+
+### Frontend
+
+1. Navigate to the `frontend` folder:
+
+   ```bash
+   cd frontend
+   ```
+2. Install dependencies:
+
+   ```bash
+   npm install
+   ```
+3. Start the React development server:
+
+   ```bash
+   npm start
+   ```
+
+---
+
+## ✨ Summary
+
+This project gave me practical experience with:
+
+* Building scalable frontend applications using ReactJS
+* Creating REST APIs with NodeJS and ExpressJS
+* Handling relational databases using PostgreSQL and Sequelize
+* Implementing secure authentication using JWT
+* Managing code and collaboration via Git and GitHub
 
 ---
 
 ## 📬 Contact
 
-If you have any questions or feedback, feel free to connect with me via [[LinkedIn](https://www.linkedin.com/in/mohamed-aashath-98ba30275/)](#) or check out my GitHub profile [aashathpanimalar](https://github.com/aashathpanimalar).
+Feel free to reach out for any questions or suggestions!
+
+[LinkedIn]([#](https://www.linkedin.com/in/mohamed-aashath-98ba30275)) | [GitHub Profile](https://github.com/aashathpanimalar)
 
 ---
 
