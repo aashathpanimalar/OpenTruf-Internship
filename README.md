@@ -175,4 +175,9 @@ Feel free to reach out for any questions or suggestions!
 [LinkedIn]([#](https://www.linkedin.com/in/mohamed-aashath-98ba30275)) | [GitHub Profile](https://github.com/aashathpanimalar)
 
 ---
+```
 
+---
+
+If you want, I can help you add badges (like build status, license, etc.), screenshots, or deployment info too! Just let me know.
+```
