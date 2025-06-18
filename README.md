@@ -130,7 +130,7 @@ This full-stack e-commerce project gave me hands-on experience with both fronten
 
 ## 📬 Contact
 
-If you have any questions or feedback, feel free to connect with me via [[LinkedIn](https://www.linkedin.com/in/mohamed-aashath-98ba30275/)](#) or check out my GitHub profile [@your-username](https://github.com/aashathpanimalar).
+If you have any questions or feedback, feel free to connect with me via [[LinkedIn](https://www.linkedin.com/in/mohamed-aashath-98ba30275/)](#) or check out my GitHub profile [aashathpanimalar](https://github.com/aashathpanimalar).
 
 ---
 
