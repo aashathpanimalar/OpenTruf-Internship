@@ -115,58 +115,6 @@ The backend code (inside `/backend`) manages API endpoints, business logic, and 
 
 ---
 
-## 📝 How to Run the Project
-
-### Backend
-
-1. Navigate to the `backend` folder:  
-   ```bash
-   cd backend
-````
-
-2. Install dependencies:
-
-   ```bash
-   npm install
-   ```
-3. Create a `.env` file with your environment variables (database URL, JWT secret, etc.).
-4. Start the backend server:
-
-   ```bash
-   npm start
-   ```
-
-### Frontend
-
-1. Navigate to the `frontend` folder:
-
-   ```bash
-   cd frontend
-   ```
-2. Install dependencies:
-
-   ```bash
-   npm install
-   ```
-3. Start the React development server:
-
-   ```bash
-   npm start
-   ```
-
----
-
-## ✨ Summary
-
-This project gave me practical experience with:
-
-* Building scalable frontend applications using ReactJS
-* Creating REST APIs with NodeJS and ExpressJS
-* Handling relational databases using PostgreSQL and Sequelize
-* Implementing secure authentication using JWT
-* Managing code and collaboration via Git and GitHub
-
----
 
 ## 📬 Contact
 
@@ -175,9 +123,3 @@ Feel free to reach out for any questions or suggestions!
 [LinkedIn]([#](https://www.linkedin.com/in/mohamed-aashath-98ba30275)) | [GitHub Profile](https://github.com/aashathpanimalar)
 
 ---
-```
-
----
-
-If you want, I can help you add badges (like build status, license, etc.), screenshots, or deployment info too! Just let me know.
-```
